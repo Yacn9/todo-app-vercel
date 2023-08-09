@@ -1,9 +1,12 @@
 {
     "rewrites": [
-      { "source": "/:path*", "destination": "http://localhost:8182/:path*" },
-      { "source": "/(.*)", "destination": "/index.html" }
-    ],
-    "env": {
-      "API_BASE_URL": "http://localhost:8182"
-    }
+      {
+        "source": "/api/(.*)",
+        "destination": "/server/api/$1"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/$1"
+      }
+    ]
   }
