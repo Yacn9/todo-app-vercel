@@ -1,10 +1,18 @@
-import React from 'react';
+import { lazy } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "components";
+
+const Home = lazy(() => import("pages/home"));
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

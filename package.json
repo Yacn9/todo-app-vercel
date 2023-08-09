@@ -25,6 +25,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "server": "cd ./server && json-server -p 8182 db.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
