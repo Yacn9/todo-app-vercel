@@ -25,7 +25,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "server": "node src/server/server.js",
+    "server": "cd ./server && json-server -p 8182 db.json",
     "dev": "react-scripts start",
     "start": "concurrently \"yarn server\" \"yarn dev\"",
     "build": "react-scripts build",
