@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
-import { BASE_URL } from "config/API.config";
+import { BASE_URL } from "config";
 
 axios.defaults.baseURL = BASE_URL;
 axios.interceptors.response.use(
